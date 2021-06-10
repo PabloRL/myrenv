@@ -19,6 +19,6 @@ EXPOSE 3838
 
 CMD ["/init"]
 
-COPY ../scripts/install_img_video.sh /rocker_scripts/install_img_video.sh
+COPY ../../scripts/install_img_video.sh /rocker_scripts/install_img_video.sh
 
 RUN /rocker_scripts/install_img_video.sh
