@@ -1,0 +1,15 @@
+version: "3.9"
+services: 
+        myrenv:
+            image: ropablolo/myrenv_4.1.0
+            container_name: myrenv
+            build:
+                context: .
+                dockerfile: ./dockerfiles/myrenv_4.1.0/Dockerfile
+            restart: unless-stopped
+            environment:
+                -root: "TRUE"
+            env_file: .env
+            ports: 
+                - 8787:8787
+                - 3838:3838
